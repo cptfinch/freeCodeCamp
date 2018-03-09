@@ -1,6 +1,6 @@
 const whatIsInAName = require("./whatIsInAName.js");
 
-test("whatIsInAName should return the correct dictionary object",function(){
+test("whatIsInAName test 1",function(){
     expect(whatIsInAName.whatIsInAName(
         [
             { first: "Romeo", last: "Montague" }, 
@@ -9,10 +9,13 @@ test("whatIsInAName should return the correct dictionary object",function(){
         ], { last: "Capulet" })
         .toEqual([
             { first: "Tybalt", last: "Capulet" }]))
-})
- 
-/* 
-whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 }) should return [{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }]
-whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 }) should return [{ "a": 1, "b": 2 }, { "a": 1, "b": 2, "c": 2 }]
-whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "c": 2 }) should return [{ "a": 1, "b": 2, "c": 2 }] */
+});
 
+test('whatIsInAName test 2', function(){
+    expect(whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 })).toEqual([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }])});  
+
+test('whatIsInAName test 3', function(){
+    expect(whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 })).toEqual([{ "a": 1, "b": 2 }, { "a": 1, "b": 2, "c": 2 }])});
+
+test('whatIsInAName test4', function(){
+    expect(whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "c": 2 })).toequal([{ "a": 1, "b": 2, "c": 2 }])}); 
