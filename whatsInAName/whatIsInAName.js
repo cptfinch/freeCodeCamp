@@ -9,4 +9,4 @@ function whatIsInAName(collection, source) {
     return arr;
 }
 
-exports.whatsInAName = whatsInAName;
+exports.whatIsInAName = whatIsInAName;
